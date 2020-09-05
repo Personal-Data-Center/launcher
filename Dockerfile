@@ -1,6 +1,6 @@
 FROM python
 
-COPY setup.sh /setup.sh
+COPY run.sh /run.sh
 
 RUN mkdir launcher
 
