@@ -1,0 +1,7 @@
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 10, 2020 - 12:37:38
+Django version 3.1.1, using settings 'launcher.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.

@@ -77,14 +77,12 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'launcher',
-        'USER': 'launcher',
+        'USER': 'root',
         'PASSWORD': 'pdc_dev',
         'HOST': 'mariadb',
         'PORT': '3306',
     }
 }
-
-
 
 
 # Password validation
