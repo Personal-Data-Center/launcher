@@ -18,5 +18,5 @@ from django.urls import path
 from pdc_dev.django_pdc import cas_views
 
 urlpatterns = [
-
+    path('accounts/login', cas_views.login.as_view(), name='cas_ng_login'),
 ]
