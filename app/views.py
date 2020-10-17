@@ -1,10 +1,10 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, request, HttpResponseRedirect
 
 # Create your views here.
 
 def index(request):
     if request.user.is_authenticated:
-        return HttpResponse("is logged in")
+        return HttpResponse("is logged in - host:" + request.META['HTTP_HOST'])
     else:
-        return HttpResponse("not logged in")
+         return HttpResponseRedirect("/authorizator/cas/login")
