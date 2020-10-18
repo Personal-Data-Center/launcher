@@ -16,9 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 import django_cas_ng.views
-from pdc_dev.django_pdc import cas_views
+
 
 urlpatterns = [
     path('', include('app.urls')),
-    path('accounts/login', cas_views.login.as_view(), name='cas_ng_login'),
+    path('cas/', include('django_pdc_login.urls')),
 ]

@@ -5,6 +5,6 @@ from django.http import HttpResponse, request, HttpResponseRedirect
 
 def index(request):
     if request.user.is_authenticated:
-        return HttpResponse("is logged in - host:" + request.META['HTTP_HOST'])
+        return HttpResponse("is logged in - username:" + request.user.username)
     else:
          return HttpResponseRedirect("/accounts/login")
