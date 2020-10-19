@@ -15,10 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-import django_cas_ng.views
 
 
 urlpatterns = [
     path('', include('app.urls')),
-    path('cas/', include('django_pdc_login.urls')),
+    path('api/', include('rest_framework.urls'))
 ]
