@@ -5,7 +5,11 @@ import * as launcher from './launcher.js'
 var TOKEN = "testtest";
 
 document.addEventListener('DOMContentLoaded', function() {
+  //create all objects
   var apiObject = new api.Request(TOKEN);
   var bannerObject = new banner.Banner(apiObject, "banner");
   var launcherObject = new launcher.Launcher(apiObject, "icons_container");
+  //remove loading overlay
+  var loadingOverlay = document.getElementsByClassName('mainLoadingOverlay')[0];
+  setTimeout(() => { loadingOverlay.style.display = "none";  }, 2000)
 }, false);

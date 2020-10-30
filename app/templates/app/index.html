@@ -20,11 +20,29 @@
 </head>
 
 <body>
+  <div class="mainLoadingOverlay">
+  <div class="mainLoadingOverlayCotainer">
+    <p class="mainLoadingOverlayContainertPDCtext">Personal Data Center</p>
+    <p class="mainLoadingOverlayContainertLodingText">Loading</p>
+    <img class="miniPDC1off" id="miniPDC1" src="{% static "img/mini_pdc_off.svg" %}" alt="">
+    <img class="miniPDC1yellow" id="miniPDC1" src="{% static "img/mini_pdc_yellow.svg" %}" alt="">
+    <img class="miniPDC1green" id="miniPDC1" src="{% static "img/mini_pdc_green.svg" %}" alt="">
+  </div>
+</div>
   <div class="header">
     <p class="header_PDC_Text">Personal Data Center</p>
     <div class="header_icon_container">
-      <div class="header_User_Icon" id="header_Icon"></div>
-      <div class="header_Config_Icon" id="header_Icon"></div>
+      <div type="checkbox" class="header_User_Icon" id="header_Icon"></div>
+      <a class="header_Config_Icon" id="header_Icon" href="/system"></a>
+    </div>
+  </div>
+  <div class="header_User_Dropdown" >
+    <div class="header_User_Dropdown_Triangle"></div>
+    <div class="header_User_Dropdown_menu">
+      <ul style="list-style-type: none;">
+        <li  class="header_User_Dropdown_menu_list"><a href="/authorizator/logout">Logout</a></li>
+
+      </ul>
     </div>
   </div>
   <div class="main_container">

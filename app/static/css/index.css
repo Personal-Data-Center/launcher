@@ -9,6 +9,138 @@ html, body {
   user-select: none;
 }
 
+.mainLoadingOverlay{
+   padding: 0;
+   border: 0;
+   position: fixed;
+   left: 0;
+   top:0;
+   font-family: 'Josefin Sans';
+   width: 100vw;
+   height: 100vh;
+   margin: 0;
+   background: #95a5a6;
+   z-index: 110;
+ }
+
+ .mainLoadingOverlayCotainer {
+     height: 400px;
+     width: 400px;
+     position: fixed;
+     top: 50%;
+     left: 50%;
+     -webkit-transform: translate(-50%, -50%);
+     transform: translate(-50%, -50%);
+ }
+
+ .mainLoadingOverlayCotainer img {
+     position: absolute;
+     top: 180px;
+     left: 130px;
+     height: 50px;
+ }
+
+ .miniPDC1off {
+   opacity: 0;
+   animation: miniPDCoff 2s infinite;
+ }
+
+ .miniPDC1green {
+   opacity: 0;
+   animation: miniPDCgreen 2s infinite;
+ }
+
+ .miniPDC1yellow {
+   opacity: 0;
+   animation: miniPDCyellow 2s infinite;
+ }
+
+ .mainLoadingOverlayContainertPDCtext{
+   text-align: center;
+   font-size: 40px;
+   color: #ecf0f1;
+   margin: 0;
+   margin-left: auto;
+ }
+ .mainLoadingOverlayContainertLodingText{
+   text-align: center;
+   font-size: 20px;
+   color: #ecf0f1;
+   margin: 0;
+   margin-left: auto;
+   margin-top: 330px;
+ }
+
+ @keyframes miniPDCoff {
+ 0%   {
+   opacity: 0;
+   top:80px;
+ }
+ 35%  {
+   opacity: 1;
+   top: 180px;
+ }
+ 65%  {
+   opacity: 1;
+   top: 180px;
+ }
+ 100% {
+   opacity: 0;
+   top: 300px;
+ }
+}
+
+@keyframes miniPDCyellow {
+ 0%   {
+   opacity: 0;
+   top:80px;
+ }
+ 35%  {
+   opacity: 0;
+   top: 180px;
+ }
+ 45% {
+   opacity: 1;
+   top: 180px;
+ }
+ 65%  {
+   opacity: 1;
+   top: 180px;
+ }
+ 100% {
+   opacity: 0;
+   top: 300px;
+ }
+}
+
+@keyframes miniPDCgreen {
+ 0%   {
+   opacity: 0;
+   top:80px;
+ }
+ 35%  {
+   opacity: 0;
+   top: 180px;
+ }
+ 45% {
+   opacity: 0;
+   top: 180px;
+ }
+ 60%  {
+   opacity: 1;
+   top: 180px;
+ }
+ 65%  {
+   opacity: 1;
+   top: 180px;
+ }
+ 100% {
+   opacity: 0;
+   top: 300px;
+ }
+}
+
+
 .header {
   position: fixed;
   background: #C4C4C4;
@@ -32,7 +164,7 @@ html, body {
 .header_PDC_Text {
   font-size: 4vh;
   height: 4vh;
-  color: #FFF;
+  color: #ECF0F1;
   font-family: "Josefin Sans";
   margin-left: 10px;
   text-align: center;
@@ -47,10 +179,14 @@ html, body {
 
 .header_User_Icon {
   background-repeat: no-repeat;
+  background-color:transparent;
+  border: 0;
   background-size: contain;
   background-image: url(/static/img/user-icon.png);
   cursor: pointer;
 }
+
+
 
 .header_Config_Icon {
   background-repeat: no-repeat;
@@ -72,6 +208,56 @@ html, body {
   width: 60vw;
   height: 90vh;
   margin-top: 4vh;
+}
+
+.header_User_Dropdown {
+  position: fixed;
+  right: 10px;
+  margin: 0;
+  margin-top: 5.5vh;
+  padding: 0;
+  width: 10%;
+  z-index: 100;
+
+}
+
+.header_User_Dropdown_Triangle{
+  position: relative;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 10px 17.3px 10px;
+  float: right;
+  margin-right: 45px;
+  border-color: transparent transparent #c4c4c4 transparent;
+}
+
+.header_User_Dropdown_menu{
+  position: relative;
+  margin-top: 15px;
+  background: #c4c4c4;
+  border-radius: 10px;
+}
+
+.header_User_Dropdown_menu ul{
+  white-space: nowrap;
+  display: inline-block;
+  margin: 0;
+  padding: 10px;
+}
+
+.header_User_Dropdown_menu_list {
+  position: relative;
+  color: #ECF0F1;
+  font-family: "Josefin Sans";
+  text-decoration: none;
+  font-size: 1.5vw;
+  text-decoration: none;
+}
+
+.header_User_Dropdown_menu_list a{
+  text-decoration: none;
+  color: #ECF0F1;
 }
 
 .section_title {
@@ -110,7 +296,8 @@ html, body {
   box-sizing: border-box;
   height: 38%;
   width: 100%;
-  background: #C4C4C4;
+  background: #ECF0F1;
+  border: 3px solid #C4C4C4;
   border-radius: 15px;
   overflow: hidden;
   display: flex;
