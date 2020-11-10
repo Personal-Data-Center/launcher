@@ -5,7 +5,6 @@ export class Launcher {
     this.apps = api.getServices();
     this.launcherHtmlObject = document.getElementsByClassName(launcherHtmlClass)[0];
     this.generate();
-    console.log(this.launcherHtmlObject);
   }
 
   generate(){
